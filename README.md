@@ -2,7 +2,7 @@
 ### NAME Varun A
 ### DEPARTMENT AIML
 ### ROLL NO 212224240178
-### DATE OF EXPERIMENT 
+### DATE OF EXPERIMENT
 
 ### AIM
 To interface a digital output device (LED) with the Raspberry Pi Pico and control it using MicroPython.
@@ -59,9 +59,9 @@ while True:
 ```
 from machine import Pin
 import time
-red_led = Pin(15, Pin.OUT)
-green_led = Pin(14, Pin.OUT)
-blue_led = Pin(13, Pin.OUT)
+red_led = Pin(0, Pin.OUT)
+green_led = Pin(1, Pin.OUT)
+blue_led = Pin(2, Pin.OUT)
 blink_delay = 0.5
 
 while True:
@@ -100,10 +100,10 @@ while True:
 from machine import Pin
 import time
 
-led1 = Pin(15, Pin.OUT)
-led2 = Pin(14, Pin.OUT)
-led3 = Pin(13, Pin.OUT)
-buzzer = Pin(12, Pin.OUT)
+led1 = Pin(0, Pin.OUT)
+led2 = Pin(1, Pin.OUT)
+led3 = Pin(2, Pin.OUT)
+buzzer = Pin(3, Pin.OUT)
 
 delay = 0.5 
 
@@ -152,7 +152,7 @@ while True:
 
 # FIGURE -04 LED AND BUZZER IN SERIES WITH TIME DELAY:
 
-<img width="1920" height="1200" alt="Screenshot (97)" src="https://github.com/user-attachments/assets/7ee8db4d-cb4d-4d2d-9019-6febf8ae062a" />
+<img width="1920" height="1200" alt="Screenshot (112)" src="https://github.com/user-attachments/assets/024ec38e-9990-4101-b09a-95514e7e96bd" />
 
 
  
