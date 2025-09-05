@@ -1,7 +1,7 @@
 # EXPERIMENT-01-INTERFACTING-DIGITAL-OUTPUT-WITH-EDGE-DEVICE---(RASPBERRYPI-PICO)
-### NAME 
-### DEPARTMENT 
-### ROLL NO 
+### NAME Varun A
+### DEPARTMENT AIML
+### ROLL NO 212224240178
 ### DATE OF EXPERIMENT 
 
 ### AIM
@@ -40,24 +40,119 @@ Connect the cathode (shorter leg) of the LED to GND (ground).
 
 
 ## PROGRAM (MicroPython)
+
+# FIGURE -02 LED WITH TIME DELAY:
 ```
-
-
- 
-
-
-
+from machine import Pin
+import time
+led = Pin(0, Pin.OUT)
+while True:
+    led.on()
+    print("LED is ON")
+    time.sleep(1)
+    led.off()
+    print("LED is OFF")
+    time.sleep(1)
  
 ````
+#  FIGURE -03 THREE LED IN SERIES WITH TIME DELAY:
+```
+from machine import Pin
+import time
+red_led = Pin(15, Pin.OUT)
+green_led = Pin(14, Pin.OUT)
+blue_led = Pin(13, Pin.OUT)
+blink_delay = 0.5
 
+while True:
+
+    print("Red LED ON")
+    red_led.on()
+    time.sleep(blink_delay)
+    red_led.off()
+    time.sleep(blink_delay)
+
+    print("Green LED ON")
+    green_led.on()
+    time.sleep(blink_delay)
+    green_led.off()
+    time.sleep(blink_delay)
+
+    print("Blue LED ON")
+    blue_led.on()
+    time.sleep(blink_delay)
+    blue_led.off()
+    time.sleep(blink_delay)
+
+    print("All LEDs ON")
+    red_led.on()
+    green_led.on()
+    blue_led.on()
+    time.sleep(1) 
+    red_led.off()
+    green_led.off()
+    blue_led.off()
+    time.sleep(1) 
+
+```
+# FIGURE -04 LED AND BUZZER IN SERIES WITH TIME DELAY:
+```
+from machine import Pin
+import time
+
+led1 = Pin(15, Pin.OUT)
+led2 = Pin(14, Pin.OUT)
+led3 = Pin(13, Pin.OUT)
+buzzer = Pin(12, Pin.OUT)
+
+delay = 0.5 
+
+led1.off()
+led2.off()
+led3.off()
+buzzer.off()
+
+while True:
+    led2.on()
+    print("LED 2 is ON")
+    time.sleep(delay)
+    led2.off()
+    print("LED 2 is OFF")
+    time.sleep(delay)
+
+    led3.on()
+    buzzer.on()
+    print("LED 3 is ON, Buzzer is ON")
+    time.sleep(delay)
+    led3.off()
+    buzzer.off()
+    print("LED 3 is OFF, Buzzer is OFF")
+    time.sleep(delay)
+
+    led1.on()
+    print("LED 1 is ON")
+    time.sleep(delay)
+    led1.off()
+    print("LED 1 is OFF")
+    time.sleep(delay)
+```
 ### OUPUT  
 
 
-# FIGURE -02 ADD TITILE HERE 
+# FIGURE -02 LED WITH TIME DELAY:
 
-#  FIGURE -03 ADD TITILE HERE 
+<img width="1920" height="1200" alt="Screenshot (102)" src="https://github.com/user-attachments/assets/494a7485-93a4-4ebb-b00e-fc6cdfe04e38" />
 
-# FIGURE -04 ADD TITLE HERE 
+
+#  FIGURE -03 THREE LED IN SERIES WITH TIME DELAY:
+
+<img width="1920" height="1200" alt="Screenshot (102)" src="https://github.com/user-attachments/assets/7c9eab07-e540-4ee1-b37c-b536e2c12f4c" />
+
+
+
+# FIGURE -04 LED AND BUZZER IN SERIES WITH TIME DELAY:
+
+<img width="1920" height="1200" alt="Screenshot (97)" src="https://github.com/user-attachments/assets/7ee8db4d-cb4d-4d2d-9019-6febf8ae062a" />
 
 
  
